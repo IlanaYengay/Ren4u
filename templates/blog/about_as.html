@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <!-- end book section -->
+  <!-- about section -->
+<div class="about">
+    <h1>О наших машинах</h1>
+    <p>Узнайте Больше О Наших Автомобилях: Идеальное Сочетание Стиля, Комфорта и Надежности!</p>
+</div>
+
+<section>
+    {% for car in cars %}
+    <ul>
+        <h4>{{ car.model }}</h4>
+        <img src="{{ car.image.url }}" alt="{{ car.make }}">
+        <li>Год выпуска: {{ car.year }}</li>
+        <li>Цена: {{ car.price }}</li>
+        <li>Цвет: {{ car.color }}</li>
+    </ul>
+    {% endfor %}
+</section>
+<div class="pagination">
+    <span class="step-links">
+        {% if cars.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ cars.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current-page">{{ cars.number }}</span>
+
+        {% if cars.has_next %}
+            <a href="?page={{ cars.next_page_number }}">next</a>
+            <a href="?page={{ cars.paginator.num_pages }}">last &raquo;</a>
+
+        {% endif %}
+    </span>
+</div>
+{% endblock %}

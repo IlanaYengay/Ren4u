@@ -1,0 +1,550 @@
+{% extends 'base.html' %}
+{% load static %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+{% block content %}
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div class="slider_container">
+        <div class="img-box">
+          <img src="{% static 'images/hero-img.jpg' %}" alt="">
+        </div>
+        <div class="detail_container">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="detail-box">
+                  <h1>
+                    Аренда машин <br>
+                    Эксперты <br>
+                    Сервис
+                  </h1>
+                  <a href="">
+                    Контакты
+                  </a>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="detail-box">
+                  <h1>
+                    Аренда машин <br>
+                    Эксперты <br>
+                    Сервис
+                  </h1>
+                  <a href="">
+                    Контакты
+                  </a>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="detail-box">
+                  <h1>
+                    Аренда машин <br>
+                    Эксперты <br>
+                    Сервис
+                  </h1>
+                  <a href="">
+                    Контакты
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+<!--  &lt;!&ndash; book section &ndash;&gt;-->
+<!--  <section class="book_section">-->
+<!--    <div class="form_container">-->
+<!--      <form action="">-->
+<!--        <div class="form-row">-->
+<!--          <div class="col-lg-8">-->
+<!--            <div class="form-row">-->
+<!--              <div class="col-md-6">-->
+<!--                <label for="parkingName">Модель машины</label>-->
+<!--                <input type="text" name="model" class="form-control" placeholder="acb ">-->
+<!--              </div>-->
+<!--              <div class="col-md-6">-->
+<!--                <label for="parkingNumber">Год выпуска</label>-->
+<!--                <input type="text" class="form-control" placeholder="гг">-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="form-row">-->
+<!--              <div class="col-md-6">-->
+<!--                <label for="parkingName">Цвет</label>-->
+<!--                <input type="text" class="form-control" placeholder="acb">-->
+<!--              </div>-->
+<!--              <div class="col-md-6">-->
+<!--                <label for="parkingNumber">Цена</label>-->
+<!--                <input type="text" class="form-control" placeholder="acb">-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-lg-4">-->
+<!--            <div class="btn-container">-->
+<!--              <a href="{% url 'filter' %}" class="btn btn-primary">Поиск</a>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--      </form>-->
+<!--    </div>-->
+<!--    <div class="img-box">-->
+<!--      <img src="{% static 'images/book-car.png' %}" alt="">-->
+<!--    </div>-->
+<!--  </section>-->
+
+<!--  &lt;!&ndash; end book section &ndash;&gt;-->
+
+  <!-- car section -->
+
+<section class="car_section layout_padding2-top layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Лучший способ найти свои любимые автомобили
+        </h2>
+        <p>
+          Исследуйте Мир Автомобилей: Найдите Идеальное Средство Передвижения для Вашей Поездки!
+        </p>
+      </div>
+      <div class="car_container">
+        <div class="box">
+          <div class="img-box">
+            <img src="{% static 'images/c-1.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Выберите свой автомобиль
+            </h5>
+            <p>
+               Выберите свой идеальный автомобиль для незабываемых поездок!
+            </p>
+            <a href="{% url 'filter' %}">Читать далее</a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="{% static 'images/c-2.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Получите свой автомобиль
+            </h5>
+            <p>
+              Получите свой собственный автомобиль и отправьтесь в путь!
+            </p>
+            <a href="">
+              Читать далее
+            </a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="{% static 'images/c-3.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Свяжитесь с вашим дилером
+            </h5>
+            <p>
+              Свяжитесь с вашим дилером, чтобы узнать больше о доступных моделях и специальных предложениях!
+            </p>
+            <a href="">
+              Читать далее
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+  <!-- end car section -->
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding-bottom">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-7 px-0">
+          <div class="img-box">
+            <img src="{% static 'images/machina.png' %}" alt="">
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <div class="detail-box">
+            <h2>
+              О наших машинах
+            </h2>
+            <p>
+              Узнайте Больше О Наших Автомобилях: Идеальное Сочетание Стиля, Комфорта и Надежности!
+            </p>
+            <a href="{% url 'about' %}" class="btn btn-primary">Читать далее</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+
+  <!-- best section -->
+
+  <section class="best_section">
+    <div class="container">
+      <div class="book_now">
+        <div class="detail-box">
+          <h2>
+            Наши лучшие машины
+          </h2>
+          <p>
+            Наши Лучшие Автомобили: Ваш Путь к Комфорту и Удовольствию от Вождения!
+          </p>
+        </div>
+        <div class="btn-box">
+          <a href="">
+            Забронируйте сейчас
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end best section -->
+
+  <!-- rent section -->
+
+<section class="rent_section layout_padding">
+    <div class="container">
+        <div class="rent_container">
+            <div class="car-list">
+                {% for car in cars %}
+                <div class="car-item">
+                    <div class="box">
+                      {{ car.model }}
+                        <div class="img-box">
+                            <img src="{{ car.image.url }}" alt="{{ car.make }}">
+                        </div>
+                        <div class="price">
+                            <a href="#">
+                                Аренда: {{ car.price }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="btn-box">
+            <a href="{% url 'best' %}" class="button">Смотреть больше</a>
+        </div>
+    </div>
+</section>
+
+  <!-- end rent section -->
+
+  <!-- blog section -->
+
+  <section class="blog_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Наши последние публикации
+        </h2>
+        <p>
+          Здесь вы можете увидеть наши самые последние новости
+        </p>
+      </div>
+    </div>
+    <div class="blog_container">
+      <div class="layout_padding2-top">
+        <div class="carousel-wrap ">
+          <div class="owl-carousel">
+            {% for blog in blogs %}
+            <div class="item">
+              <div class="box">
+                <div class="date-box">
+                  <h6>
+                    {{ blog.date }}
+                  </h6>
+                </div>
+                <div class="img-box">
+                  <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    {{ blog.title }}
+                  </h5>
+                  <p>{{ blog.description }}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end blog section -->
+
+  <!-- us section -->
+
+  <section class="us_section">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Почему стоит выбрать нас
+        </h2>
+        <p>
+          Существует множество причин, почему стоит выбрать именно нас, когда речь идет о выборе автомобиля. Наш опыт и профессионализм делают нас надежным партнером для ваших автомобильных потребностей.
+        </p>
+      </div>
+    </div>
+    <div class="us_container layout_padding2">
+      <div class="content_box">
+        <div class="box">
+          <div class="img-box">
+            <img src="{% static 'images/u-1.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Низкая арендная плата
+            </h5>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="{% static 'images/u-2.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Быстрые машины
+            </h5>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="{% static 'images/u-3.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Безопасность
+            </h5>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="{% static 'images/u-4.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Быстрая поддержка
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="btn-box">
+        <a href="">
+          Читать далее
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- end us section -->
+
+  <!-- client section -->
+
+  <section class="client_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Отзывы пользователей
+        </h2>
+        <p>
+          В этом разделе вы можете посмотреть отзывы пользователей о нашем сайте
+        </p>
+      </div>
+      <div class="layout_padding2-top">
+        <div class="carousel-wrap ">
+          <div class="owl-carousel">
+            {% for feedback in feedbacks %}
+            <div class="item">
+              <div class="box">
+                <div class="detail-box">
+                  <p>
+                    {{ feedback.text }}
+                  </p>
+                </div>
+                <div class="client_id">
+                  <div class="img-box">
+<!--                    {% if gender == 'female' %}-->
+                    <img src="{% static 'images/client-1.png' %}" alt="" class="img-1">
+                    <img src="{% static 'images/client-1-white.png' %}" alt="" class="img-2">
+<!--                    {% else %}-->
+                    <img src="{% static 'images/client-2.png' %}" alt="" class="img-2">
+                    <img src="{% static 'images/client-2-white.png' %}" alt="" class="img-2">
+
+<!--                    <img src="{% static 'images/client-2-white.png' %}" alt="" class="img-2">-->
+                  </div>
+<!--                  {% endif %}-->
+                  <div class="name">
+
+                    <h6>
+                      {{ feedback.name }}
+                    </h6>
+                    <p>
+                      {{ feedback.profession }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- end client section -->
+
+  <!-- contact section -->
+
+  <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Запросить обратный звонок
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="form_container">
+            <form action="{% url 'index' %}" method="post" id="callbackForm">
+              {% csrf_token %}
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  {{ form.name }}
+                </div>
+                <div class="form-group col-md-6">
+                  {{ form.phone }}
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col">
+                  {{ form.email }}
+                </div>
+              </div>
+              <div class="form-group">
+                {{ form.message }}
+              </div>
+              <div class="d-flex justify-content-center">
+                <button type="submit" class="">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="contact_items">
+
+        <a href="">
+          <div class="img-box">
+            <img src="{% static 'images/location.png' %}" alt="">
+          </div>
+          <h6>
+            Loram Ipusum ari
+            lo elisant na
+          </h6>
+        </a>
+        <a href="">
+          <div class="img-box">
+            <img src="{% static 'images/call.png' %}" alt="">
+          </div>
+          <h6>
+            (+12 1234456789)
+          </h6>
+        </a>
+        <a href="">
+          <div class="img-box">
+            <img src="{% static 'images/mail.png' %}" alt="">
+          </div>
+          <h6>
+            demo@gmail.com
+          </h6>
+        </a>
+
+      </div>
+      <div class="social_container">
+        <div class="social-box">
+          <div>
+            <a href="">
+              <img src="{% static 'images/fb.png' %}" alt="">
+            </a>
+          </div>
+          <div>
+            <a href="">
+              <img src="{% static 'images/twitter.png' %}" alt="">
+            </a>
+          </div>
+          <div>
+            <a href="">
+              <img src="{% static 'images/linkedin.png' %}" alt="">
+            </a>
+          </div>
+          <div>
+            <a href="">
+              <img src="{% static 'images/insta.png' %}" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end contact section -->
+
+  <!-- map section -->
+
+  <section class="map_section">
+    <!-- map section -->
+    <div class="map_container">
+      <div class="map-responsive">
+        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
+      </div>
+    </div>
+    <!-- end map section -->
+  </section>
+
+
+  <!-- end map section -->
+<script>
+$(document).ready(function() {
+    $("#callbackForm").on("submit", function(e) {
+        e.preventDefault();  // отмена стандартного поведения формы
+        $.ajax({
+            url: "",  // адрес для отправки данных (может быть таким же, как текущая страница)
+            type: "post",
+            data: $(this).serialize(),  // сериализация данных формы
+            success: function(response) {
+                alert("Ваша заявка была успешно отправлена, мы свяжемся с вами в ближайшее время.");
+            },
+            error: function(error) {
+                alert("Произошла ошибка, пожалуйста, попробуйте еще раз.");
+            }
+        });
+    });
+});
+</script>
+ {% endblock %}

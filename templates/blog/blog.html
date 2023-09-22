@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <!-- blog section -->
+
+<section class="blog_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Our Latest Blog
+        </h2>
+        <p>
+          Здесь вы можете увидеть наши самые последние новости
+        </p>
+      </div>
+    </div>
+    <div class="blog_container">
+      <div class="layout_padding2-top">
+        <div class="carousel-wrap ">
+          <div class="owl-carousel">
+            {% for blog in blogs %}
+            <div class="item">
+              <div class="box">
+                <div class="date-box">
+                  <h6>
+                    {{ blog.date }}
+                  </h6>
+                </div>
+                <div class="img-box">
+                  <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    {{ blog.title }}
+                  </h5>
+                  <p>{{ blog.description }}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end blog section -->
+{% endblock %}

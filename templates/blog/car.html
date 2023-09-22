@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <!-- car section -->
+
+  <section class="car_section layout_padding2-top layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Лучший способ найти свои любимые автомобили
+        </h2>
+        <p>
+          Исследуйте Мир Автомобилей: Найдите Идеальное Средство Передвижения для Вашей Поездки!
+        </p>
+      </div>
+      <div class="car_container">
+        <div class="box">
+          <div class="img-box">
+            <img src="{% static 'images/c-1.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Выберите свой автомобиль
+            </h5>
+            <p>
+               Выберите свой идеальный автомобиль для незабываемых поездок!
+            </p>
+            <a href="">
+              Читать далее
+            </a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="{% static 'images/c-2.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Получите свой автомобиль
+            </h5>
+            <p>
+              Получите свой собственный автомобиль и отправьтесь в путь!
+            </p>
+            <a href="">
+              Читать далее
+            </a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="{% static 'images/c-3.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Свяжитесь с вашим дилером
+            </h5>
+            <p>
+              Свяжитесь с вашим дилером, чтобы узнать больше о доступных моделях и специальных предложениях!
+            </p>
+            <a href="">
+              Читать далее
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end car section -->
+
+
+  <!-- best section -->
+
+
+  <!-- end rent section -->
+{% endblock %}

@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <!-- book section -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<section class="book_section">
+    <div class="form_container">
+        <form method="get" action="">
+            <div class="form-row">
+                <div class="col-lg-8">
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <label for="{{ form.make.id_for_label }}">Желаемый автомобиль на выбор</label>
+                            {{ form.make }}
+                        </div>
+                        <div class="col-md-6">
+                            <label for="{{ form.model.id_for_label }}">Желаемый модель на выбор</label>
+                            {{ form.model }}
+                        </div>
+                        <div class="col-md-6">
+                            <label for="{{ form.color.id_for_label }}">Желаемый цвет автомобиля</label>
+                            {{ form.color }}
+                        </div>
+                        <div class="col-md-6">
+                            <label for="{{ form.year.id_for_label }}">Год выпуска</label>
+                            {{ form.year }}
+                        </div>
+                        <div class="col-md-6">
+                            <label for="{{ form.price_from.id_for_label }}">Цена от</label>
+                            {{ form.price_from }}
+                        </div>
+                        <div class="col-md-6">
+                            <label for="{{ form.price_to.id_for_label }}">Цена до</label>
+                            {{ form.price_to }}
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="btn-container">
+                        <button type="submit">
+                            Найти
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+ {% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+      {% endif %}
+    </div>
+    <div class="img-box">
+      <img src="{% static 'images/book-car.png' %}" alt="">
+    </div>
+  </section>
+
+  <!-- end book section -->
+  <!-- about section -->
+<div class="about">
+    <h1>О наших машинах</h1>
+    <p>Узнайте Больше О Наших Автомобилях: Идеальное Сочетание Стиля, Комфорта и Надежности!</p>
+</div>
+
+<section>
+
+    {% for car in cars %}
+    <ul>
+        <h4>{{ car.model }}</h4>
+        <img src="{{ car.image.url }}" alt="{{ car.make }}">
+        <li>Год выпуска: {{ car.year }}</li>
+        <li>Цена: {{ car.price }}</li>
+        <li>Цвет: {{ car.color }}</li>
+        <br>
+        <form action="{% url 'filter' %}" method="post">
+            <a href="" class="btn btn-success">Арендовать</a>
+        </form>
+    </ul>
+    {% endfor %}
+</section>
+<div class="pagination">
+    <span class="step-links">
+        {% if cars.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ cars.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current-page">{{ cars.number }}</span>
+
+        {% if cars.has_next %}
+            <a href="?page={{ cars.next_page_number }}">next</a>
+            <a href="?page={{ cars.paginator.num_pages }}">last &raquo;</a>
+
+        {% endif %}
+    </span>
+</div>
+{% endblock %}

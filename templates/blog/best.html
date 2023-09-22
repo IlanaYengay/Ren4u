@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="best_section">
+    <div class="container">
+      <div class="book_now">
+        <div class="detail-box">
+          <h2>
+            Наши лучшие машины
+          </h2>
+          <p>
+            Наши Лучшие Автомобили: Ваш Путь к Комфорту и Удовольствию от Вождения!
+          </p>
+        </div>
+        <div class="btn-box">
+          <a href="">
+            Забронируйте сейчас
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end best section -->
+
+  <!-- rent section -->
+ <section class="best">
+    {% for car in cars %}
+    <ul>
+        <h4>{{ car.model }}</h4>
+        <img src="{{ car.image.url }}" alt="{{ car.make }}">
+        <li>Описание: {{ car.bio }}</li>
+        <li>Год выпуска: {{ car.year }}</li>
+        <li>Цена: {{ car.price }}</li>
+        <li>Цвет: {{ car.color }}</li>
+    </ul>
+    {% endfor %}
+</section>
+<section class="best">
+    {% for car in cars %}
+    <!-- Ваш код для отображения карточки автомобиля -->
+    {% endfor %}
+</section>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if cars.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ cars.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current-page">{{ best.number }}</span>
+
+        {% if cars.has_next %}
+            <a href="?page={{ cars.next_page_number }}">next</a>
+            <a href="?page={{ cars.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+{% endblock %}
